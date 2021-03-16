@@ -5,11 +5,13 @@
     background-image: linear-gradient(to right, #82a195, #afbebb)
 }
 
+/*FONTE*/
 @font-face{
     font-family: Arkhip;
     src: url(\Arkhip\TTF\Arkhip-Regular.ttf);
 }
 
+/*QUADRADO PRINCIPAL*/
 .div-principal{
     width: 800px;
     height: 400px;
@@ -21,6 +23,7 @@
     box-shadow: 0 0 500px 2px rgba(73, 43, 43, 0.2), 0 0 100px 10px rgba(0, 0, 0, 0.19);
 }
 
+/*BRAND DA EMPRESA*/
 .imagem-logo{
     position: absolute;
     padding-right: 0px;
@@ -35,20 +38,22 @@
     
 }
 
-.div-formulario{
+/*FORMULÁRIO DE CADASTRO*/
+.form-container{
     position: absolute;
     padding-left: 0px;
     margin-left: 480px;
     margin-top: 60px;
 }
 
-#inputs{
+.inputs{
     margin-top: 25px;
     padding: 10px;
     width: 250px;
     font-size: small;
     text-align: left;
     border: none;
+    outline: 0;
     border-bottom: 1.5px solid #698371;
     background: none;
     font-family: Arkhip;
@@ -56,6 +61,7 @@
     color: aliceblue;
 }
 
+/*BOTÃO DE CADASTRO*/
 .btn-cadastro{
     margin-top: 30px;
     margin-left: 65px;
@@ -73,6 +79,7 @@
     background-color: #698371;
 }
 
+/*BOTÃO DE RECUPERAR SENHA*/
 .btn-recuperar{
     margin-top: 40px;
     margin-left: 50px;
@@ -86,3 +93,10 @@
 .btn-recuperar:hover{
     text-shadow: 2px 2px 20px #698371;
 }
+
+/*ALERTA*/
+.msg{
+    display: none;
+    margin-top: 5px;
+}
+

@@ -7,26 +7,62 @@
 
     <!--CSS-->
     <link rel="Stylesheet" href="style.css">
-    <!--BOOTSTRAP-->
+    <!--BOOTSTRAP CSS-->
     <link rel="Stylesheet" href="bootstrap-5.0.0-beta2-dist\css\bootstrap.min.css">
 
 </head>
 <body class="body">
-
+    
+    <!--CONTAINER PRINCIPAL-->
     <div class="div-principal">
         <div class="imagem-logo">
             <img src="comidinhas_da_mamae.png" id="img-logo">
         </div>
-        <div class="div-formulario">
-            <input type="email" placeholder="Email@exemplo.com" class="" id="inputs">
-            <input type="senha" placeholder="Senha" class="" id="inputs">
-            <input type="senha" placeholder="Confirmar senha" class="" id="inputs">
+        <!--FORMULÁRIO-->
+        <form class="form-container">
+            <input type="email" placeholder="Email@exemplo.com" class="inputs" id="email">
+            <input type="password" placeholder="Senha" class="inputs" id="senha">
+            <input type="password" placeholder="Confirmar senha" class="inputs" id="confirmarSenha">
             <div class="botoes">
-                <button type="button" class="btn-cadastro">Cadastrar</button>
+                <button type="button" class="btn-cadastro" onclick="cadastrar()">Cadastrar</button>
                 <button type="button" class="btn-recuperar">Esqueceu sua senha?</button>
+            <!--ALERTS-->
+            <div class="alert alert-danger msg" role="alert" id="msgErro">
+                Preencha todos os campos!
             </div>
-        </div>
+            <div class="alert alert-warning msg" role="alert" id="msgErro2">
+                Senhas diferentes!
+            </div>
+            <div class="alert alert-success msg" role="alert" id="msgSucesso">
+                Sua mensagem foi enviada com sucesso!
+            </div>
+        </form>
     </div>
+
+
+    <!--Script-->
+    <script type="text/javascript">
+        const cadastrar = function () {
+            let email = document.getElementById('email').value
+            let senha = document.getElementById('senha').value
+            let confirmarSenha = document.getElementById('confirmarSenha').value
+
+            if(email == "" || senha == "" || confirmarSenha == "" ){
+                $('#msgErro').slideToggle(400).delay(2000).slideUp(400)
+            }else if(usuario.search("@")==-1){
+                $('#msgErro').slideToggle(400).delay(2000).slideUp(400)
+            }else if(senha != confirmarSenha){
+                $('#msgErro2').slideToggle(400).delay(2000).slideUp(400)
+            }else{
+                $('#msgSucesso').slideToggle(400).delay(2000).slideUp(400)
+            }
+        }
+    </script>
+
+    <!--jQUERY-->
+    <script src="jquery-3.3.1.min.js"></script>
+    <!--BOOTSTRAP JAVASCRIPT-->
+    <script src="bootstrap-5.0.0-beta2-dist\js\bootstrap.min.js"></script>
 
 </body>
 </html>
