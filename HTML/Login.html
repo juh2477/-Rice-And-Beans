@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <!--CSS-->
+    <link rel="Stylesheet" href="../CSS/style.css">
+    <!--BOOTSTRAP CSS-->
+    <link rel="Stylesheet" href="../SRC/bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css">
+
+</head>
+<body class="body">
+
+    <!--ALERTS-->
+    <div class="alert alert-danger msg" role="alert" id="msgErro">
+        Preencha todos os campos!
+    </div>
+    <div class="alert alert-warning msg" role="alert" id="msgErro2">
+        Senha inválida!
+    </div>
+    
+    <!--CONTAINER PRINCIPAL-->
+    <div class="div-principal">
+        <div class="imagem-logo">
+            <img src="../SRC/riceAndBeans.png" id="img-logo">
+        </div>
+        <!--FORMULÁRIO-->
+        <form class="form-container">
+            <input type="email" placeholder="Email@exemplo.com" class="inputs input-login" id="email">
+            <input type="password" placeholder="Senha" class="inputs" id="senha">
+            <div class="botoes">
+                <button type="button" class="btns btn-login" onclick="logar()">Login</button>
+                <button type="button" class="btn-recuperar">Esqueceu sua senha?</button>
+            </div>
+        </form>
+    </div>
+
+    <!--Script-->
+    <script type="text/javascript">
+        const logar = function () {
+            let email = document.getElementById('email').value
+            let senha = document.getElementById('senha').value
+
+            if(email == "" || senha == ""){
+                $('#msgErro').slideToggle(400).delay(2000).slideUp(400)
+            }
+               
+        } 
+    </script>
+
+    <!--jQUERY-->
+    <script src="../JS/jquery-3.3.1.min.js"></script>
+    <!--BOOTSTRAP JAVASCRIPT-->
+    <script src="../SRC/bootstrap-5.0.0-beta2-dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>

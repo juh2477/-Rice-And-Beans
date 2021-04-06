@@ -6,40 +6,40 @@
     <title>Cadastro</title>
 
     <!--CSS-->
-    <link rel="Stylesheet" href="style.css">
+    <link rel="Stylesheet" href="../CSS/style.css">
     <!--BOOTSTRAP CSS-->
-    <link rel="Stylesheet" href="bootstrap-5.0.0-beta2-dist\css\bootstrap.min.css">
+    <link rel="Stylesheet" href="../SRC/bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css">
 
 </head>
 <body class="body">
+
+    <!--ALERTS-->
+    <div class="alert alert-danger msg" role="alert" id="msgErro">
+        Preencha todos os campos!
+    </div>
+    <div class="alert alert-warning msg" role="alert" id="msgErro2">
+        Senhas diferentes!
+    </div>
+    <div class="alert alert-success msg" role="alert" id="msgSucesso">
+        Cadastro realizado com sucesso!
+    </div>
     
     <!--CONTAINER PRINCIPAL-->
     <div class="div-principal">
         <div class="imagem-logo">
-            <img src="comidinhas_da_mamae.png" id="img-logo">
+            <img src="../SRC/riceAndBeans.png" id="img-logo">
         </div>
         <!--FORMULÁRIO-->
         <form class="form-container">
-            <input type="name" placeholder="Nome completo" class="inputs" id="nome">
+            <input type="name" placeholder="Nome completo" class="inputs" id="nome" onblur="name">
             <input type="email" placeholder="Email@exemplo.com" class="inputs" id="email">
             <input type="password" placeholder="Senha" class="inputs" id="senha">
             <input type="password" placeholder="Confirmar senha" class="inputs" id="confirmarSenha">
             <div class="botoes">
-                <button type="button" class="btn-cadastro" onclick="cadastrar()">Cadastrar</button>
-                <button type="button" class="btn-recuperar">Esqueceu sua senha?</button>
-            <!--ALERTS-->
-            <div class="alert alert-danger msg" role="alert" id="msgErro">
-                Preencha todos os campos!
-            </div>
-            <div class="alert alert-warning msg" role="alert" id="msgErro2">
-                Senhas diferentes!
-            </div>
-            <div class="alert alert-success msg" role="alert" id="msgSucesso">
-                Sua mensagem foi enviada com sucesso!
+                <button type="button" class="btns" onclick="cadastrar()">Cadastrar</button>
             </div>
         </form>
     </div>
-
 
     <!--Script-->
     <script type="text/javascript">
@@ -51,10 +51,8 @@
 
             if(nome == "" || email == "" || senha == "" || confirmarSenha == "" ){
                 $('#msgErro').slideToggle(400).delay(2000).slideUp(400)
-            }else if(usuario.search("@")==-1){
+            }else if(confirmarSenha != senha){
                 $('#msgErro2').slideToggle(400).delay(2000).slideUp(400)
-            }else if(senha != confirmarSenha){
-                $('#msgErro').slideToggle(400).delay(2000).slideUp(400)
             }else{
                 $('#msgSucesso').slideToggle(400).delay(2000).slideUp(400)
             }
@@ -62,9 +60,9 @@
     </script>
 
     <!--jQUERY-->
-    <script src="jquery-3.3.1.min.js"></script>
+    <script src="../JS/jquery-3.3.1.min.js"></script>
     <!--BOOTSTRAP JAVASCRIPT-->
-    <script src="bootstrap-5.0.0-beta2-dist\js\bootstrap.min.js"></script>
+    <script src="../SRC/bootstrap-5.0.0-beta2-dist/js/bootstrap.min.js"></script>
 
 </body>
 </html>
