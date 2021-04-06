@@ -43,7 +43,7 @@
     position: absolute;
     padding-left: 0px;
     margin-left: 480px;
-    margin-top: 60px;
+    margin-top: 20px;
 }
 
 .inputs{
@@ -81,7 +81,7 @@
 
 /*BOTÃO DE RECUPERAR SENHA*/
 .btn-recuperar{
-    margin-top: 40px;
+    margin-top: 20px;
     margin-left: 50px;
     border: none;
     background: none;
