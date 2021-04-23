@@ -41,20 +41,34 @@
         </form>
     </div>
 
+    <!--FOOTER-->
+    <div class="footer">
+        <div class="elementoFooter">
+            © Created by Innovation TECH
+            <a href="https://github.com/juh2477/ADA_pol-tica-de-privacidade.git">Termo de Privacidade</a>
+        </div>
+    </div>
+
+
     <!--Script-->
     <script type="text/javascript">
+        const abrirLogin = function(){
+            window.location.href = "Login.html";
+            return abrirLogin;
+        }
         const cadastrar = function () {
-            let nome = document.getElementById('nome').value
-            let email = document.getElementById('email').value
-            let senha = document.getElementById('senha').value
-            let confirmarSenha = document.getElementById('confirmarSenha').value
+            let nome = document.getElementById('nome').value;
+            let email = document.getElementById('email').value;
+            let senha = document.getElementById('senha').value;
+            let confirmarSenha = document.getElementById('confirmarSenha').value;
 
             if(nome == "" || email == "" || senha == "" || confirmarSenha == "" ){
-                $('#msgErro').slideToggle(400).delay(2000).slideUp(400)
+                $('#msgErro').slideToggle(400).delay(2000).slideUp(400);
             }else if(confirmarSenha != senha){
-                $('#msgErro2').slideToggle(400).delay(2000).slideUp(400)
+                $('#msgErro2').slideToggle(400).delay(2000).slideUp(400);
             }else{
-                $('#msgSucesso').slideToggle(400).delay(2000).slideUp(400)
+                $('#msgSucesso').slideToggle(400).delay(2000).slideUp(400);
+                abrirLogin;
             }
         } 
     </script>
