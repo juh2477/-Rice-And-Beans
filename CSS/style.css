@@ -80,6 +80,36 @@
     align-items: baseline;
     width: 100%;
 }
+
+/**********TENTANDO ARRUMAR OS CARDS DAS CATEGORIAS**********/
+/*DESCRIÇÃO DOS PRODUTOS cards*/
+.media-body>h5{
+    font-size: 30px;
+    color: #423144;
+    text-decoration: none;
+    outline: none;
+}
+
+/*IMAGEM DO PRODUTO*/
+ .img{
+     box-shadow: inset;
+ }
+
+ /*BOTÃO COMPRAR*/
+#comprar{
+    color: #fff;
+    background-color: #900d0d;
+    padding: 5px;
+    margin: 5px;
+    width: 100px;
+    font-size: 15px;
+}
+
+#comprar:hover{
+    background-color: #fff;
+    color: #900d0d;
+    border: 2px solid #900d0d;
+}
  
  /******************CADASTRO & LOGIN******************/
 /*QUADRADO PRINCIPAL*/
