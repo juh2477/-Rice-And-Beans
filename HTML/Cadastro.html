@@ -42,7 +42,7 @@
     </div>
 
     <!--FOOTER-->
-    <div class="footer">
+    <div class="footer footerCadastro">
         <div class="elementoFooter">
             © Created by Innovation TECH
             <a href="https://github.com/juh2477/ADA_pol-tica-de-privacidade.git">Termo de Privacidade</a>
@@ -62,11 +62,17 @@
             let senha = document.getElementById('senha').value;
             let confirmarSenha = document.getElementById('confirmarSenha').value;
 
+            /*PEGAR OS DADOS DO USUÁRIO*/
+            
+
+
             if(nome == "" || email == "" || senha == "" || confirmarSenha == "" ){
                 $('#msgErro').slideToggle(400).delay(2000).slideUp(400);
             }else if(confirmarSenha != senha){
                 $('#msgErro2').slideToggle(400).delay(2000).slideUp(400);
             }else{
+                /*código java*/
+                
                 $('#msgSucesso').slideToggle(400).delay(2000).slideUp(400);
                 abrirLogin;
             }

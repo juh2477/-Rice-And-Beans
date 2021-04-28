@@ -4,6 +4,7 @@
     src: url(../SRC/Arkhip/TTF/Arkhip-Regular.ttf);
 }
 
+/*CORPO DO HTML*/
 .body{
     margin: 0;
     padding: 0;
@@ -26,37 +27,45 @@
     height: 65px;
     width: 100%;
  }
-    .logo{
-        padding: 0;
-        margin-left: 200px;
-        margin-top: 2px;
-        height: 85px;
-        width: 170px;
-    }
+
+/*BRAND DA MARCA*/
+.logo{
+    padding: 0;
+    margin-left: 200px;
+    margin-top: 2px;
+    height: 85px;
+    width: 170px;
+}
+
+/*LISTA DOS BOTÕES DO NAVBAR (RESPONSIVO)*/
  nav ul{
      float: right;
      margin-right: 20px;
- }
-   
+ }  
  nav ul li{
      display: inline-block;
      line-height: 65px;
      margin: 0 5px;
  }
- 
+
+ /*BOTÕES DE RECEITA*/
  nav ul li a{
      color: #900d0d;
      font-size: 12px;
      padding: 5px 15x;
      border-radius: 5px;
      text-decoration: none;
+     outline: none;
      text-transform: uppercase;
  }
  a.active, a:hover{
      color: #cf1b1b;
      transition: .4s;
+     text-decoration: none;
+     outline: none;
  }
- 
+
+ /*DISPLAY RESPONSIVO*/
  .checkbtn{
       font-size: 30px;
       color: #900d0d;
@@ -66,48 +75,104 @@
       cursor: pointer;
       /*display :none; */
  }
-  
  #check{
       display: none;
  }
 
  /************************INDEX*************************/
+ 
  /*CAROUSEL*/
 .carousel{
     margin: 0%;
+    margin-top: 50px;
     padding: 0%;
     display: flex;
     align-items: baseline;
     width: 100%;
 }
 
+/*TÍTULO - CATEGORIA*/
+.tituloIndex{
+    font-size: 50px;
+    color: #900d0d;
+    font-family: Arkhip;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+}
+
+/*LINHA - SEPARADOR HORIZONTAL*/
+.hr {
+    margin: 40px 0;
+}
+.hr3 {
+    border: 0;
+    height: 5px;
+    background-image: linear-gradient(to right, transparent, rgb(177, 177, 177), transparent);  
+    margin-bottom: 50px;
+}
+
 /**********TENTANDO ARRUMAR OS CARDS DAS CATEGORIAS**********/
-/*DESCRIÇÃO DOS PRODUTOS cards*/
-.media-body>h5{
-    font-size: 30px;
+.todosCards{
+    margin-left: 3%;
+    margin-right: auto;
+}
+
+.card{
+    overflow: hidden;
+}
+
+/*IMAGEM DO PRODUTO*/
+.img{
+    position: static;
+    box-shadow: inset;
+    transition: transform .2s;
+    width: 200px;
+    height: 200px;
+    opacity: 0.5;
+}
+.img:hover {
+    transform: scale(1.2);
+}
+/***CORPO DOS CARDS - TÍTULOS E BOTÕES***/
+.card-body{
+    position: relative;
+}
+
+.card-body>h5{
+    font-size: 18px;
+}
+
+/*TÍTULO DOS PRODUTOS cards*/
+.tituloCategoria{
+    position: static;
+    margin-left: auto;
+    margin-right: auto; 
+    text-align: center;
+    margin-top: 15px;
     color: #423144;
     text-decoration: none;
     outline: none;
 }
 
-/*IMAGEM DO PRODUTO*/
- .img{
-     box-shadow: inset;
- }
-
  /*BOTÃO COMPRAR*/
-#comprar{
-    color: #fff;
-    background-color: #900d0d;
-    padding: 5px;
-    margin: 5px;
-    width: 100px;
-    font-size: 15px;
-}
-
-#comprar:hover{
-    background-color: #fff;
+#verReceitas{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto; 
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: #900d0d;
+    background-color: #fff;
+    width: 150px;
+    font-size: 15px;
+    border: 2px solid #900d0d;
+}
+#verReceitas:hover{
+    background-color: #900d0d;
+    color: #fff;
     border: 2px solid #900d0d;
 }
  
@@ -218,8 +283,13 @@ h1{
     margin: 0;
     left: 0;
     bottom: 0;
-    position: fixed;
+    position: static;
     font-size: 12px;
     color: rgb(107, 107, 107);
+}
+/*FOOTER DAS TELAS DE CADASTRO E LOGIN*/
+/*REAJUSTADO PARA FICAR NA PARTE INFERIOR DA PÁGINA*/
+.footerCadastro{
+    position: fixed;
 }
     
