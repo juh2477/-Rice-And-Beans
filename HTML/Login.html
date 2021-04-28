@@ -41,19 +41,24 @@
     <div class="footer footerCadastro">
         <div class="elementoFooter">
             © Created by Innovation TECH
-            <a href="https://github.com/juh2477/ADA_pol-tica-de-privacidade.git">Termo de Privacidade</a>
         </div>
     </div>
 
 
     <!--Script-->
     <script type="text/javascript">
+        const abrirIndex = function(){
+            window.location.href = "Index.html";
+            return abrirIndex;
+        }
         const logar = function () {
             let email = document.getElementById('email').value
             let senha = document.getElementById('senha').value
 
             if(email == "" || senha == ""){
                 $('#msgErro').slideToggle(400).delay(2000).slideUp(400)
+            }else{
+                abrirIndex();
             }
                
         } 

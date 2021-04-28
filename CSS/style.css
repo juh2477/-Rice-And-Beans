@@ -132,9 +132,7 @@
     height: 200px;
     opacity: 0.5;
 }
-.img:hover {
-    transform: scale(1.2);
-}
+
 /***CORPO DOS CARDS - TÍTULOS E BOTÕES***/
 .card-body{
     position: relative;
