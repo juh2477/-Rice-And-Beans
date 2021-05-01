@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 
+    <!--LINKS PARA ESTILO DA PÁGINA-->
     <!--CSS-->
     <link rel="Stylesheet" href="../CSS/style.css">
     <!--BOOTSTRAP CSS-->
@@ -13,25 +14,31 @@
 </head>
 <body class="body">
 
-    <!--ALERTS-->
+    <!--ALERTS DA TELA DE LOGIN-->
+    <!--ALERT ERRO NO PREENCHIMENTO-->
     <div class="alert alert-danger msg" role="alert" id="msgErro">
         Preencha todos os campos!
     </div>
+    <!--ALERT SENHA INVÁLIDA-->
     <div class="alert alert-warning msg" role="alert" id="msgErro2">
         Senha inválida!
     </div>
     
-    <!--CONTAINER PRINCIPAL-->
+    <!--CONTAINER PRINCIPAL - DIV FORMULÁRIO DE LOGIN-->
     <div class="div-principal">
         <div class="imagem-logo">
             <img src="../SRC/riceAndBeans.png" id="img-logo">
         </div>
-        <!--FORMULÁRIO-->
+        <!--FORMULÁRIO DO LOGIN-->
         <form class="form-container">
+            <!--EMAIL-->
             <input type="email" placeholder="Email@exemplo.com" class="inputs input-login" id="email">
+            <!--SENHA-->
             <input type="password" placeholder="Senha" class="inputs" id="senha">
             <div class="botoes">
+                <!--BOTÃO LOGAR-->
                 <button type="button" class="btns btn-login" onclick="logar()">Login</button>
+                <!--BOTÃO ESQUECI A SENHA-->
                 <button type="button" class="btn-recuperar">Esqueceu sua senha?</button>
             </div>
         </form>
@@ -45,19 +52,25 @@
     </div>
 
 
-    <!--Script-->
+    <!--SCRIPTS JS-->
     <script type="text/javascript">
+        //FUÇÃO PARA ABRIR INDEX AO CLICAR NO BOTÃO DE LOGIN
         const abrirIndex = function(){
             window.location.href = "Index.html";
             return abrirIndex;
         }
+        //FUNÇÃO PARA VALIDAR SE TODOS OS CAMPOS ESTÃO PREENCHIDOS NO FORMULÁRIO DE LOGIN
         const logar = function () {
+            //DECLARAÇÃO DE VARIÁVEIS
             let email = document.getElementById('email').value
             let senha = document.getElementById('senha').value
 
+            //CONDIÇÃO PARA EFETUAR LOGIN
             if(email == "" || senha == ""){
+                //MOSTRAR MENSAGEM DE ERRO NA TELA CASO FORMULÁRIO DE LOGIN ESTEJA INCOMPLETO
                 $('#msgErro').slideToggle(400).delay(2000).slideUp(400)
             }else{
+                //ABRIR TELA INDEX
                 abrirIndex();
             }
                

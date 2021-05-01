@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rice and Beans</title>
 
+    <!--LINKS PARA ESTILO DA PÁGINA-->
     <!--CSS-->
     <link rel="Stylesheet" type="text/css" href="../CSS/style.css">
+    <!--BOOTSTRAP-->
     <link rel="Stylesheet" href="../SRC/bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css">
+    <!--FONT AWASOME-->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
    
 </head>
 <body>
+  <!--NAVBAR DO SITE - MENU COM BOTÕES-->
     <nav>
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
@@ -20,31 +24,38 @@
         </label>
         <img src="../SRC/RicePNG3.png" alt="rice and beans"  class="logo">
             <ul>
-                <li><a href="Index.html">Inicio</a></li>
-                <li><a href="Receitas.html">Cadastrar receita</a></li>
+              <!--LINKS DO NAVBAR-->
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="receitas.html">Cadastrar receita</a></li>
                 <li><a href="#">Categorias</a></li>
             </ul>
     </nav>
 
-    <!--CORPO/CONTEÚDO DO INDEX-->
-    <!--CAROUSEL-->
+    <!--CORPO/CONTEÚDO DA PÁGINA PRINCIPAL (INDEX)-->
+
+    <!--CAROUSEL DE IMAGENS - SLIDES-->
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
+        <!--BOTÕES PARA MUDANÇA DE SLIDE - INDICADORES-->
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
       <div class="carousel-inner">
+        <!--IMAGEM SLIDE 1-->
         <div class="carousel-item active">
           <img src="../SRC/8.png" class="d-block w-100" alt="BEM-VINDO">
         </div>
+        <!--IMAGEM SLIDE 2-->
         <div class="carousel-item">
           <img src="../SRC/9.png" class="d-block w-100" alt="slide anuncio">
         </div>
+        <!--IMAGEM SLIDE 3-->
         <div class="carousel-item">
           <img src="../SRC/10.png" class="d-block w-100" alt="slide anuncio 2">
         </div>
       </div>
+      <!--BOTÕES PARA PASSAR OS SLIDES - CONTROLES-->
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
@@ -57,50 +68,66 @@
 
     <!--CATEGORIAS-->
     <section>
+        <!--TÍTULO DAS CATEGORIAS-->
         <h1 class="tituloIndex">Categorias</h1>
         <hr class="hr3">
 
-        <!--CARDS CATEGORIAS-->
+        <!--CARDS DAS CATEGORIAS-->
         <div class="todosCards">
-          <!--LINHA 1-->
+          <!--LINHA 1 DOS CARDS-->
           <div class="row linha">
 
-            <!--CARD DE RECEITA, TENTANDO ARRUMAR O TITULO DO LINK PARA FICAR COM FORMATAÇÃO DESEJADA-->
+            <!--PRIMEIRO CARD LINHA 1- CATEGORIA VEGANO-->
             <div class="col-sm-3">
               <div class="card shadow-lg mb-5 bg-white rounded" style="width: 18rem; height: 18rem;">
+                  <!--IMAGEM DO CARD-->
                   <img class="card-img-top img" src="../SRC/imagens cortadas/download (1).png" alt="Imagem de capa do card">
                   <div class="card-body">
+                      <!--TÍTILO DO CARD-->
                       <h5 class="card-title tituloCategoria">Vegano</h5>
+                      <!--BOTÃO - LINK DO CARD-->
                       <a href="#" class="btn" id="verReceitas">Ver receitas</a>
                   </div>
               </div>
             </div>
 
+             <!--SEGUNDO CARD LINHA 1- CATEGORIA TORTA SALGADA-->
             <div class="col-sm-3">
               <div class="card shadow-lg mb-5 bg-white rounded" style="width: 18rem; height: 18rem;">
+                <!--IMAGEM DO CARD-->
                 <img class="card-img-top img" src="../SRC/imagens cortadas/download (2).png" alt="Imagem de capa do card">
                 <div class="card-body">
+                  <!--TÍTILO DO CARD-->
                   <h5 class="card-title tituloCategoria">Tortas salgadas</h5>
+                  <!--BOTÃO - LINK DO CARD-->
                   <a href="#" class="btn" id="verReceitas">Ver receitas</a>
                 </div>
               </div>
             </div>
 
+             <!--TERCEIRO CARD LINHA 1- CATEGORIA DOCES VEGANOS-->
             <div class="col-sm-3">
               <div class="card shadow-lg mb-5 bg-white rounded" style="width: 18rem; height: 18rem;">
+                <!--IMAGEM DO CARD-->
                 <img class="card-img-top img" src="../SRC/imagens cortadas/download (3).png" alt="Imagem de capa do card">
                 <div class="card-body">
+                  <!--TÍTILO DO CARD-->
                   <h5 class="card-title tituloCategoria">Doces veganos</h5>
+                  <!--BOTÃO - LINK DO CARD-->
                   <a href="#" class="btn" id="verReceitas">Ver receitas</a>
                 </div>
               </div>
             </div>
 
+             <!--QUARTO CARD LINHA 1- CATEGORIA SEM LACTOSE-->
             <div class="col-sm-3">
               <div class="card shadow-lg mb-5 bg-white rounded" style="width: 18rem; height: 18rem;">
+                <!--IMAGEM DO CARD-->
                 <img class="card-img-top img" src="../SRC/imagens cortadas/download (4).png" alt="Imagem de capa do card">
                 <div class="card-body">
-                  <h5 class="card-title tituloCategoria">S/ Lactose</h5>
+                  <!--TÍTILO DO CARD-->
+                  <h5 class="card-title tituloCategoria">Sem Lactose</h5>
+                  <!--BOTÃO - LINK DO CARD-->
                   <a href="#" class="btn" id="verReceitas">Ver receitas</a>
                 </div>
               </div>
@@ -108,44 +135,60 @@
 
           </div>
 
-          <!--LINHA 2-->
+          <!--LINHA 2 DOS CARDS-->
           <div class="row linha">
 
+             <!--PRIMEIRO CARD LINHA 2- CATEGORIA VEGETARIANO-->
             <div class="col-sm-3">
               <div class="card shadow-lg mb-5 bg-white rounded" style="width: 18rem; height: 18rem;">
+                <!--IMAGEM DO CARD-->
                 <img class="card-img-top img" src="../SRC/imagens cortadas/download (5).png" alt="Imagem de capa do card">
                 <div class="card-body">
+                  <!--TÍTILO DO CARD-->
                   <h5 class="card-title tituloCategoria">Vegetariano</h5>
+                  <!--BOTÃO - LINK DO CARD-->
                   <a href="#" class="btn" id="verReceitas">Ver receitas</a>
                 </div>
               </div>
             </div>
 
+             <!--SEGUNDO CARD LINHA 2- CATEGORIA REFEIÇÕES DIÁRIAS-->
             <div class="col-sm-3">
               <div class="card shadow-lg mb-5 bg-white rounded" style="width: 18rem; height: 18rem;">
+                <!--IMAGEM DO CARD-->
                 <img class="card-img-top img" src="../SRC/imagens cortadas/download (6).png" alt="Imagem de capa do card">
                 <div class="card-body">
-                  <h5 class="card-title tituloCategoria">refeicoes diarias</h5>
+                    <!--TÍTILO DO CARD-->
+                    <h5 class="card-title tituloCategoria">refeicoes diarias</h5>
+                    <!--BOTÃO - LINK DO CARD-->
                     <a href="#" class="btn" id="verReceitas">Ver receitas</a>
                 </div>
               </div>
             </div>
 
+             <!--TERCEIRO CARD LINHA 2- CATEGORIA COMIDA DE VÓ-->
             <div class="col-sm-3">
               <div class="card shadow-lg mb-5 bg-white rounded" style="width: 18rem; height: 18rem;">
+                <!--IMAGEM DO CARD-->
                 <img class="card-img-top img" src="../SRC/imagens cortadas/download (7).png" alt="Imagem de capa do card">
                 <div class="card-body">
+                  <!--TÍTILO DO CARD-->
                   <h5 class="card-title tituloCategoria">Comida de vo</h5>
+                  <!--BOTÃO - LINK DO CARD-->
                   <a href="#" class="btn" id="verReceitas">Ver receitas</a>
                 </div>
               </div>
             </div>
 
+             <!--QUARTO CARD LINHA 2- CATEGORIA DOCES-->
             <div class="col-sm-3">
               <div class="card shadow-lg mb-5 bg-white rounded" style="width: 18rem; height: 18rem;">
+                <!--IMAGEM DO CARD-->
                 <img class="card-img-top img" src="../SRC/imagens cortadas/download (8).png" alt="Imagem de capa do card">
                 <div class="card-body">
+                  <!--TÍTILO DO CARD-->
                   <h5 class="card-title tituloCategoria">Doces</h5>
+                  <!--BOTÃO - LINK DO CARD-->
                   <a href="#" class="btn" id="verReceitas">Ver receitas</a>
                 </div>
               </div>

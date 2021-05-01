@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
 
+    <!--LINKS PARA ESTILO DA PÁGINA-->
     <!--CSS-->
     <link rel="Stylesheet" href="../CSS/style.css">
     <!--BOOTSTRAP CSS-->
@@ -13,29 +14,37 @@
 </head>
 <body class="body">
 
-    <!--ALERTS-->
+    <!--ALERTS DA VALIDAÇÃO DO CADASTRO-->
+    <!--ALERT DE ERRO NO PREENCHIMENTO-->
     <div class="alert alert-danger msg" role="alert" id="msgErro">
         Preencha todos os campos!
     </div>
+    <!--ALERT DE ERRO NA VALIDAÇÃO DAS SENHAS-->
     <div class="alert alert-warning msg" role="alert" id="msgErro2">
         Senhas diferentes!
     </div>
+    <!--ALERT DE CADASTRO CONCLUÍDO COM SUCESSO
     <div class="alert alert-success msg" role="alert" id="msgSucesso">
         Cadastro realizado com sucesso!
-    </div>
+    </div>-->
     
-    <!--CONTAINER PRINCIPAL-->
+    <!--CONTAINER PRINCIPAL - DIV FORMULÁRIO DO CADASTRO-->
     <div class="div-principal">
         <div class="imagem-logo">
             <img src="../SRC/riceAndBeans.png" id="img-logo">
         </div>
-        <!--FORMULÁRIO-->
+        <!--FORMULÁRIO DE CADASTRO-->
         <form class="form-container">
+            <!--NOME-->
             <input type="name" placeholder="Nome completo" class="inputs" id="nome" onblur="name">
+            <!--EMAIL-->
             <input type="email" placeholder="Email@exemplo.com" class="inputs" id="email">
+            <!--SENHA-->
             <input type="password" placeholder="Senha" class="inputs" id="senha">
+            <!--CONFIRMAR SENHA-->
             <input type="password" placeholder="Confirmar senha" class="inputs" id="confirmarSenha">
             <div class="botoes">
+                <!--BOTÃO CADASTRAR-->
                 <button type="button" class="btns" onclick="cadastrar()">Cadastrar</button>
             </div>
         </form>
@@ -49,23 +58,29 @@
     </div>
 
 
-    <!--Script-->
+    <!--SCRIPTS JS-->
     <script type="text/javascript">
+        //FUNÇÃO PARA ABRIR TELA DE LOGIN AO CLICAR NO BOTÃO CADASTRAR
         const abrirLogin = function(){
-            window.location.href = "Login.html";
+            window.location.href = "login.html";
             return abrirLogin;
         }
+        //FUNÇÃO PARA VALIDAR SE OS CAMPOS DO FORMULÁRIO DE CADASTRO ESTÃO PREENCHIDOS CORRETAMENTE
         const cadastrar = function () {
+            //DECLARAÇÃO DE VARIÁVEIS
             let nome = document.getElementById('nome').value;
             let email = document.getElementById('email').value;
             let senha = document.getElementById('senha').value;
             let confirmarSenha = document.getElementById('confirmarSenha').value;
 
             if(nome == "" || email == "" || senha == "" || confirmarSenha == "" ){
+                //EXIBIR MENSAGEM DE ERRO CASO O FORMULÁRIO ESTEJA INCOMPLETO
                 $('#msgErro').slideToggle(400).delay(2000).slideUp(400);
             }else if(confirmarSenha != senha){
+                //EXIBIR MENSAGEM DE ERRO CASO OS CAMPOS SENHA E CONFIRMAÇÃO DE SENHA SEJAM DIFERENTES
                 $('#msgErro2').slideToggle(400).delay(2000).slideUp(400);
             }else{
+                //ABRIR TELA DE LOGIN
                 abrirLogin();
             }
         } 

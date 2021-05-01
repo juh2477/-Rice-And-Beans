@@ -113,7 +113,7 @@
     margin-bottom: 50px;
 }
 
-/**********TENTANDO ARRUMAR OS CARDS DAS CATEGORIAS**********/
+/**********CARDS DAS CATEGORIAS**********/
 .todosCards{
     margin-left: 3%;
     margin-right: auto;
@@ -123,7 +123,7 @@
     overflow: hidden;
 }
 
-/*IMAGEM DO PRODUTO*/
+/*IMAGEM DO PRODUTO - CARDS*/
 .img{
     position: static;
     box-shadow: inset;
