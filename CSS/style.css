@@ -27,15 +27,14 @@
     height: 65px;
     width: 100%;
  }
-
-/*BRAND DA MARCA*/
-.logo{
-    padding: 0;
-    margin-left: 200px;
-    margin-top: 2px;
-    height: 85px;
-    width: 170px;
-}
+    /*BRAND DA MARCA*/
+    .logo{
+        padding: 0;
+        margin-left: 200px;
+        margin-top: 2px;
+        height: 85px;
+        width: 170px;
+    }
 
 /*LISTA DOS BOTÕES DO NAVBAR (RESPONSIVO)*/
  nav ul{
